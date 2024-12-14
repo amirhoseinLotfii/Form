@@ -1,14 +1,9 @@
-import { getServerSession } from "next-auth";
+import HomeTemplate from "@/components/templates/HomeTemplate";
 
 const Home = async () => {
-  const sesion = await getServerSession();
-
-  console.log(sesion?.user);
-
   return (
     <div>
-      Home
-      {sesion?.user?.email}
+      <HomeTemplate />
     </div>
   );
 };
